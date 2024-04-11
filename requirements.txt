@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+regex
+emoji
+nltk
+scipy
+# latest versions as of 2023-05-17
+matplotlib # visualizations
+seaborn  # visualizations
+plotly # visualizations
+scikit-learn # ML library
+pandas  # data structures library
+pillow # image processing and display library
