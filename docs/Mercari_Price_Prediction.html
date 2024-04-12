@@ -6,8 +6,6 @@
 <title>Mercari_Price_Prediction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
-
-
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -15103,7 +15101,42 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+  <h2><strong>Agile Software Prototyping</strong></h2>
+
+<h3><strong>Group 2 - QuickSellz</strong></h3>
+
+<h3><em>Hemasree Krishna Kumar</em></h3>
+<h3><em>Jency Shijin</em></h3>
+<h3><em>John Prasad Alber Mathiarasu</em></h3>
+<h3><em>Sachin Joseph</em></h3>
+
+<a href="https://github.com/sachinjoseph26/Price-Prediction/tree/main">Our Price Prediction Repository on GitHub</a>
+
+<h1 id="Product-Price-Prediction">Product Price Prediction<a class="anchor-link" href="#Product-Price-Prediction">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>The aim of the project is to predict the price based on the features such as product name, brand name, item description, item_condition id and shipping. Wa are using the dataset from Kaggle. Here is the link to the dataset <a href="https://www.kaggle.com/competitions/mercari-price-suggestion-challenge/data">Dataset</a>. The dataset contains two files train.tsv and test.tsv. We are using train.tsv alone.</p>
+<p>Also we have refered code from git hub page. Link to the <a href="https://github.com/aniket-mish/price-prediction-at-mercari">reference code</a></p>
+
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15111,7 +15144,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importing the libraries</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
 <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
@@ -15144,7 +15178,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_price_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;data\train.tsv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reading the Mercari product price prediction dataset </span>
+<span class="n">df_price_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;dataset.tsv&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15343,6 +15378,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Data-Pre-processing">Data Pre-processing<a class="anchor-link" href="#Data-Pre-processing">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15351,7 +15397,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_values_count</span> <span class="o">=</span> <span class="n">df_price_dataset</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Checking missing values</span>
+<span class="n">missing_values_count</span> <span class="o">=</span> <span class="n">df_price_dataset</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="c1">#look at the missing value</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">missing_values_count</span><span class="p">)</span>
 </pre></div>
@@ -15398,7 +15445,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_category</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Method to split the category name into main category and sub-categories</span>
+<span class="k">def</span> <span class="nf">process_category</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         
         <span class="k">def</span> <span class="nf">get_part</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -15433,7 +15481,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">process_category</span><span class="p">(</span><span class="n">df_price_dataset</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calling the process category function</span>
+<span class="n">process_category</span><span class="p">(</span><span class="n">df_price_dataset</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15660,7 +15709,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_price_dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span><span class="s1">&#39;brand_name&#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;category_0&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;category_1&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;category_2&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Removing missing values</span>
+<span class="n">df_price_dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span><span class="s1">&#39;brand_name&#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;category_0&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;category_1&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;category_2&#39;</span><span class="p">:</span> <span class="s1">&#39;other&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15972,7 +16022,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decontracted</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to expand the code</span>
+<span class="k">def</span> <span class="nf">decontracted</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
     <span class="n">phrase</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;won&#39;t&quot;</span><span class="p">,</span> <span class="s2">&quot;will not&quot;</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
     <span class="n">phrase</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;can\&#39;t&quot;</span><span class="p">,</span> <span class="s2">&quot;can not&quot;</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
     <span class="n">phrase</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;n\&#39;t&quot;</span><span class="p">,</span> <span class="s2">&quot; not&quot;</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
@@ -15999,7 +16050,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cleaning our text features</span>
+<span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;&#39;</span>  <span class="c1"># Return empty string for non-string inputs</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -16267,7 +16319,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_features</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to extract the features from brand_name</span>
+<span class="k">def</span> <span class="nf">get_features</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     
     <span class="n">luxury_brands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;MCM&quot;</span><span class="p">,</span> <span class="s2">&quot;MCM Worldwide&quot;</span><span class="p">,</span> <span class="s2">&quot;Louis Vuitton&quot;</span><span class="p">,</span> <span class="s2">&quot;Burberry&quot;</span><span class="p">,</span> <span class="s2">&quot;Burberry London&quot;</span><span class="p">,</span> <span class="s2">&quot;Burberry Brit&quot;</span><span class="p">,</span> <span class="s2">&quot;HERMES&quot;</span><span class="p">,</span> <span class="s2">&quot;Tieks&quot;</span><span class="p">,</span>
                      <span class="s2">&quot;Rolex&quot;</span><span class="p">,</span> <span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Gucci&quot;</span><span class="p">,</span> <span class="s2">&quot;Valentino&quot;</span><span class="p">,</span> <span class="s2">&quot;Valentino Garavani&quot;</span><span class="p">,</span> <span class="s2">&quot;RED Valentino&quot;</span><span class="p">,</span> <span class="s2">&quot;Cartier&quot;</span><span class="p">,</span> <span class="s2">&quot;Christian Louboutin&quot;</span><span class="p">,</span>
@@ -17039,45 +17092,6 @@ dtype: int64
 
 </div>
 
-</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_price_dataset</span><span class="p">[</span><span class="s1">&#39;shipping&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([1, 0], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17123,7 +17137,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_ohe</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to get the cone hot encoding of the categorical variables</span>
+<span class="k">def</span> <span class="nf">get_ohe</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
     <span class="n">vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
     <span class="n">tr_ohe</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
     <span class="n">val_ohe</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_val</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -17144,7 +17159,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_text_encodings</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span> <span class="n">col_name</span><span class="p">,</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to convert the text into feature vectors using TF-IDF vector</span>
+<span class="k">def</span> <span class="nf">get_text_encodings</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span> <span class="n">col_name</span><span class="p">,</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
     <span class="n">vect</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">min_df</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ngram_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">),</span> <span class="n">max_features</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">)</span>
     <span class="n">tr_text</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
     <span class="n">val_text</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_val</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -17165,7 +17181,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_encodings</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span><span class="n">X_test</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine the features together</span>
+<span class="k">def</span> <span class="nf">generate_encodings</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span><span class="n">X_test</span><span class="p">):</span>
     <span class="n">tr_ohe_category_0</span><span class="p">,</span><span class="n">val_ohe_category_0</span><span class="p">,</span><span class="n">te_ohe_category_0</span> <span class="o">=</span> <span class="n">get_ohe</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="s1">&#39;category_0&#39;</span><span class="p">)</span>
     <span class="n">tr_ohe_category_1</span><span class="p">,</span><span class="n">val_ohe_category_1</span><span class="p">,</span><span class="n">te_ohe_category_1</span> <span class="o">=</span> <span class="n">get_ohe</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="s1">&#39;category_1&#39;</span><span class="p">)</span>
     <span class="n">tr_ohe_category_2</span><span class="p">,</span><span class="n">val_ohe_category_2</span><span class="p">,</span><span class="n">te_ohe_category_2</span> <span class="o">=</span> <span class="n">get_ohe</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span> <span class="s1">&#39;category_2&#39;</span><span class="p">)</span>
@@ -17237,6 +17254,17 @@ dtype: int64
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Dimensionality-reduction">Dimensionality reduction<a class="anchor-link" href="#Dimensionality-reduction">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17273,6 +17301,17 @@ dtype: int64
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Modeling">Modeling<a class="anchor-link" href="#Modeling">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17370,6 +17409,17 @@ dtype: int64
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Model-Evaluation">Model Evaluation<a class="anchor-link" href="#Model-Evaluation">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17580,6 +17630,17 @@ dtype: int64
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Testing-the-model-on-a-single-user-input">Testing the model on a single user input<a class="anchor-link" href="#Testing-the-model-on-a-single-user-input">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17588,7 +17649,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loaded_model</span> <span class="o">=</span> <span class="n">XGBRegressor</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading the model</span>
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">XGBRegressor</span><span class="p">()</span>
 <span class="n">loaded_model</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;XGBoost_PricePrediction_Model.hdf5&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -17605,7 +17667,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_ohe_single</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pre-processing the model for single input </span>
+<span class="k">def</span> <span class="nf">get_ohe_single</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
     <span class="n">vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="n">col_name</span><span class="p">],</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
         <span class="n">ohe</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">))</span>  <span class="c1"># Convert to Unicode</span>
@@ -17678,7 +17741,8 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[176]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span> <span class="o">=</span> <span class="p">[{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sample user input</span>
+<span class="n">sample_data</span> <span class="o">=</span> <span class="p">[{</span>
     <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Levis Black Leggings, Womens. Size L.&#39;</span><span class="p">,</span>
     <span class="s1">&#39;item_condition_id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s1">&#39;category_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Women/Athletic Apparel/Pants, Tights, Leggings&#39;</span><span class="p">,</span>
@@ -17778,23 +17842,17 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[178]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">final_fun_1</span><span class="p">(</span><span class="n">input_data</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">load_predict_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">):</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Processing Data...&#39;</span><span class="p">)</span>
     <span class="n">processed_data</span> <span class="o">=</span> <span class="n">preprocess</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Generating Encodings...&#39;</span><span class="p">)</span>
     <span class="n">encoded_data</span> <span class="o">=</span> <span class="n">generate_encodings_single</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">encoded_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># converting the feature dimension to 1000</span>
     <span class="n">target_num_features</span> <span class="o">=</span> <span class="mi">1000</span>
     <span class="n">reshaped_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">target_num_features</span><span class="p">))</span>
     <span class="c1"># Copy the existing data into the new array</span>
     <span class="n">reshaped_arr</span><span class="p">[:,</span> <span class="p">:</span><span class="n">encoded_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">encoded_data</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-
     <span class="nb">print</span><span class="p">(</span><span class="n">reshaped_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Making Predictions...&#39;</span><span class="p">)</span>
-
     <span class="n">pred</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reshaped_arr</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">pred</span>
@@ -17813,7 +17871,7 @@ dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[179]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_fun_1</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">load_predict_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
 </pre></div>
 
      </div>

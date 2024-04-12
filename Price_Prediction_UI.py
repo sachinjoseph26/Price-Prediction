@@ -1,8 +1,19 @@
+                                ## Agile Software Prototyping
+                                ### Group 2 - QuickSellz
+
+
+                                ## Price Prediction UI
+            
+            ### Hemasree Krishna Kumar
+            ### Jency Shijin
+            ### John Prasad Alber Mathiarasu
+            ### Sachin Joseph
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import re
-#import emoji
+import emoji
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -104,7 +115,7 @@ def clean_text(text):
     text = text.replace('\\n', ' ')
     text = decontracted(text)
     # Remove emojis
-    #text = emoji.demojize(text)
+    text = emoji.demojize(text)
     tokens = word_tokenize(text)
     stop_words = set(stopwords.words('english'))
     filtered_tokens = [word for word in tokens if word not in stop_words and word not in list(string.punctuation)]
